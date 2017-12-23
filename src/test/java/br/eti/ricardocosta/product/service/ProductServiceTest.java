@@ -1,5 +1,6 @@
 package br.eti.ricardocosta.product.service;
 
+
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.equalTo;
 
@@ -13,7 +14,6 @@ import org.mockito.junit.MockitoJUnitRunner;
 import br.eti.ricardocosta.product.dao.ProductDAO;
 import br.eti.ricardocosta.product.domain.Product;
 import br.eti.ricardocosta.product.domain.ProductDataBuilder;
-import br.eti.ricardocosta.product.service.ProductService;
 
 @RunWith(MockitoJUnitRunner.class)
 public class ProductServiceTest {
@@ -30,7 +30,7 @@ public class ProductServiceTest {
 		Mockito.when(productDAO.findById(ProductDataBuilder.ID)).thenReturn(productMock);
 		Product productFinded = productService.findById(ProductDataBuilder.ID);
 		
-		assertThat(productFinded,equalTo(productMock));
+		assertThat(productFinded, equalTo(productMock));
 	}
 
 	@Test
