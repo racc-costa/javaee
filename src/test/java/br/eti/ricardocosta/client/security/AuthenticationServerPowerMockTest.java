@@ -34,7 +34,7 @@ public class AuthenticationServerPowerMockTest {
 		PowerMockito.mockStatic(LocalDate.class);
 		Mockito.when(LocalDate.now()).thenReturn((DateUtil.zeroDay()));
 		String token = authenticationServer.login(ClientDataBuilder.EMAIL, ClientDataBuilder.PASSWORD);
-		assertThat("30bd757c71a75539e46851464c9138d", equalTo(token));
+		assertThat("6c185e6aced663e47914de268e326d8", equalTo(token));
 	}
 
 	@Test

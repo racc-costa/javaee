@@ -6,10 +6,11 @@
 	<artifactId>javaee-app</artifactId>
 	<version>1.0.0</version>
 	<packaging>war</packaging>
-	<inceptionYear>2018</inceptionYear>
 
 	<name>javaee-app</name>
-	<url>https://github.com/racc-costa/javaee-unit-testing</url>
+	<description>Java EE Sample Application</description>
+	<url>https://github.com/racc-costa/javaee</url>
+	<inceptionYear>2018</inceptionYear>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -32,6 +33,16 @@
 			<timezone>America/Sao_Paulo</timezone>
 		</developer>
 	</developers>
+
+	<issueManagement>
+		<url>https://github.com/racc-costa/javaee/issues</url>
+		<system>GitHub Issues</system>
+	</issueManagement>
+	<scm>
+		<url>https://github.com/racc-costa/javaee</url>
+		<connection>scm:git:git://github.com/racc-costa/javaee.git</connection>
+		<developerConnection>scm:git:git@github.com:racc-costa/javaee.git</developerConnection>
+	</scm>
 
 	<dependencies>
 		<dependency>
@@ -144,7 +155,7 @@
 				<version>2.20.1</version>
 				<configuration>
 					<systemPropertyVariables>
-						<jacoco-agent.destfile>${project.build.directory}/coverage.exec</jacoco-agent.destfile>
+						<jacoco-agent.destfile>${project.build.directory}/jacoco.exec</jacoco-agent.destfile>
 					</systemPropertyVariables>
 				</configuration>
 			</plugin>

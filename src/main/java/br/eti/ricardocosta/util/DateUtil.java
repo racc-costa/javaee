@@ -4,6 +4,9 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 public class DateUtil {
+	
+	DateUtil() {
+	}
 
 	public static LocalDate zeroDay() {
 		return LocalDate.of(1970, 1, 1);

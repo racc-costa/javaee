@@ -12,7 +12,7 @@ import br.eti.ricardocosta.exception.InfrastructureException;
 public class AuthenticationServer {
 
 	public String login(String email, String password) throws InfrastructureException {
-		return cryptWithMD5(LocalDate.now() + email);
+		return cryptWithMD5(LocalDate.now() + email + password);
 	}
 
 	public static String encrypt(String cleanPassword) throws InfrastructureException {
@@ -25,7 +25,7 @@ public class AuthenticationServer {
 			byte[] passBytes = cleanPassword.getBytes();
 			md.reset();
 			byte[] digested = md.digest(passBytes);
-			StringBuffer sb = new StringBuffer();
+			StringBuilder sb = new StringBuilder();
 			for (int i = 0; i < digested.length; i++) {
 				sb.append(Integer.toHexString(0xff & digested[i]));
 			}
